@@ -1,12 +1,12 @@
-import pickle
-list = [input('Введите: ').split()]
+import pickle #Добавляет модуль pickle
+list = [input('Введите: ').split()] #Позволят не менять код при заполнении а просто ввести
 try:
-    file = open("favorites.dat.", "wb")
+    file = open("favorites.dat.", "wb") #Создает файл
 
     try:
-        pickle.dump(things, file)
+        pickle.dump(things, file) #возвращает сериализованный объект
     finally:
-        file.close()
+        file.close() #Завершает процесс
 
 except FileNotFoundError:
-    print("Неполучилось:(")
+    print("Неполучилось:(") #Если что-то не так
